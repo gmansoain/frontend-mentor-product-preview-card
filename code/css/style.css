@@ -1,0 +1,154 @@
+/* FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+    --primary-green-500: hsl(158, 36%, 37%);
+    --primary-green-700: hsl(158, 42%, 18%);
+    --neutral-black: hsl(212, 21%, 14%);
+    --neutral-grey: hsl(228, 12%, 48%);
+    --neutral-cream: hsl(30, 38%, 92%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --radius-sm: 1rem;
+}
+
+/* FONTS */
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/fraunces-v38-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    background-color: var(--neutral-cream);
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    /* border radius not working?? */
+}
+
+.card-image {
+    flex: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: var(--radius-sm);
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+.card-text-container {
+    flex: 1;
+    background-color: var(--neutral-white);
+    border-top-right-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+}
+
+.card-text {
+    padding: 4rem;
+}
+
+.card-text h2 {
+    color: var(--neutral-grey);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+/* add letter spacing */      
+}
+
+.card-text h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 4rem;
+    padding: 2.4rem 0;
+    line-height: 1.1;
+}
+
+
+
+.card-text p {
+    /* padding: 2.4rem 0; */
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--neutral-grey);
+}
+
+.card-text .price {
+    padding: 2.4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    color: var(--neutral-grey);
+    font-size: 1.4rem;
+    text-decoration: line-through;
+}
+
+.price span {
+    color: var(--primary-green-500);
+    font-family: 'Fraunces', serif;
+    font-size: 4rem;
+}
+
+
+
+.card-text .btn {
+    cursor: pointer;
+    color: var(--neutral-white);
+    background-color: var(--primary-green-500);
+    border: none;
+    padding: 1.6rem 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.card-text .btn:hover {
+    background-color: var(--primary-green-700);
+}
