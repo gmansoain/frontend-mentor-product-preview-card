@@ -64,13 +64,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1.6rem;
 }
 
 .card {
-    width: 70rem;
-    margin: 0 auto;
+    max-width: 70rem;
+    width: 100%;
     display: flex;
-    /* border radius not working?? */
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 
 .card-image {
@@ -79,66 +81,64 @@ main {
 
 .card-image img {
     width: 100%;
-    height: auto;
-    border-top-left-radius: var(--radius-sm);
-    border-bottom-left-radius: var(--radius-sm);
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-text-container {
     flex: 1;
     background-color: var(--neutral-white);
-    border-top-right-radius: var(--radius-sm);
-    border-bottom-right-radius: var(--radius-sm);
 }
 
 .card-text {
     padding: 4rem;
 }
 
-.card-text h2 {
+.card-text .category {
     color: var(--neutral-grey);
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
-/* add letter spacing */      
+    letter-spacing: 1rem;
 }
 
 .card-text h1 {
     font-family: 'Fraunces', serif;
     font-size: 4rem;
-    padding: 2.4rem 0;
+    padding: 2rem 0;
     line-height: 1.1;
 }
 
 
 
 .card-text p {
-    /* padding: 2.4rem 0; */
     font-size: 1.4rem;
     line-height: 1.7;
     color: var(--neutral-grey);
 }
 
-.card-text .price {
-    padding: 2.4rem 0;
+.price {
+    color: var(--primary-green-500);
+    font-family: 'Fraunces', serif;
+    font-size: 4rem;
     display: flex;
     align-items: center;
     gap: 2.4rem;
+    padding: 2.4rem 0;
+}
+
+.price s {
     color: var(--neutral-grey);
     font-size: 1.4rem;
     text-decoration: line-through;
 }
 
-.price span {
-    color: var(--primary-green-500);
-    font-family: 'Fraunces', serif;
-    font-size: 4rem;
-}
-
-
-
 .card-text .btn {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
     color: var(--neutral-white);
     background-color: var(--primary-green-500);
     border: none;
@@ -149,6 +149,7 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.card-text .btn:hover {
+.card-text .btn:hover,
+.card-text .btn:focus-visible {
     background-color: var(--primary-green-700);
 }
