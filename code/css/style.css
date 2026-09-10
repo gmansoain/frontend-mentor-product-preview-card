@@ -113,6 +113,7 @@ main {
 
 .card-text p {
     font-size: 1.4rem;
+    font-weight: 500;
     line-height: 1.7;
     color: var(--neutral-grey);
 }
@@ -152,4 +153,28 @@ main {
 .card-text .btn:hover,
 .card-text .btn:focus-visible {
     background-color: var(--primary-green-700);
+}
+
+/* styles that only apply when viewport is 40rem=640px or narrower */
+@media (max-width: 40rem) {
+    .card {
+        flex-direction: column;
+    } 
+
+    .card-text {
+        padding: 2.4rem;
+    }
+
+    .card-text .category {
+        letter-spacing: 0.5rem;
+    }
+
+    .card-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .price {
+        font-size: 3.2rem;
+        padding: 1.6rem 0;
+    }
 }
