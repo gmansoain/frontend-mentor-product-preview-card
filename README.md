@@ -27,12 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="1571" height="721" alt="image" src="https://github.com/user-attachments/assets/4befdd91-c2db-41af-95dc-9dd306405a27" />
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/gmansoain/frontend-mentor-product-preview-card.git
+- Live Site URL: https://gon-frontend-mentor-product-preview.netlify.app/
 
 ## My process
 
