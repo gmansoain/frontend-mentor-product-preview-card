@@ -28,6 +28,7 @@ Users should be able to:
 ### Screenshot
 
 <img width="1571" height="721" alt="image" src="https://github.com/user-attachments/assets/4befdd91-c2db-41af-95dc-9dd306405a27" />
+<img width="153" height="362" alt="image" src="https://github.com/user-attachments/assets/bd0cd868-fb67-4238-87eb-9f9a67facd94" />
 
 
 ### Links
